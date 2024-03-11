@@ -18,7 +18,15 @@ const module = {
         use: {
             loader: 'babel-loader'
         }
-    }
+    },
+    {
+      test: /\.(js|jsx)$/,
+      use: [
+        {
+          loader: `val-loader`,
+        },
+      ],
+    },
     ]
 };
 export const devtool = 'cheap-module-eval-source-map';
